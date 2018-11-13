@@ -1,3 +1,45 @@
+// -- Bordes redondeados
+@mixin rounded($radio) {
+  border-radius: $radio;
+  -moz-border-radius: $radio;
+  -webkit-border-radius: $radio;
+}
+
+// -- Header
+.bg-dark {
+  margin-bottom:20px;
+}
+
+// -- Carousel
+.card{
+  a{
+    color:#000;
+    text-decoration:none;
+  }
+  a:hover{
+    text-decoration:none;
+  }
+}
+.card-title {
+  text-transform: capitalize;
+}
+.carousel-control-prev, .carousel-control-next {
+  width:6%;
+  [class^="carousel-control"]{
+    @include rounded(20px);
+    background-color:#000;
+    padding:20px;
+    background-size:50%;
+  }
+}
+
+// -- Detalle
+.product-details {
+  img{
+    width:100%;
+  }
+}
+
 @media (min-width: 768px) {
   .carousel-inner .active,
   .carousel-inner .active + .carousel-item,
